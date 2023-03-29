@@ -1,0 +1,131 @@
+4. 
+
+mkdir SI_2023_lab1_216057 
+cd SI_2023_lab1_216057
+
+git init
+Иницијализација
+
+5.
+
+git remote add origin https://github.com/ruzicaa06/SI_2023_lab1_216057.git
+Поврзувње на локалниот репозиториум со оддалечениот репозиториум
+
+6.
+
+nano README.md
+git add README.md
+Се додава фајлот README.md во состојба staged
+
+git commit -m 'Initial commit'
+Се креира нов commit
+
+7.
+
+nano SILab1.java
+git add .
+git commit -m 'Add java class'
+
+8.
+
+git push origin master
+Синхронизирање на сите гранки со оддалечениот репозиториум
+
+9.
+
+git branch bug1
+git branch bug2
+git branch bug3
+Се креираат три нови гранки
+
+
+10.
+
+git checkout bug1
+Префрлање на гранка bug1
+
+11.
+
+git add SILab1.java
+git commit -m 'Fix wrong loop for reading'
+
+12.
+
+git checkout bug2
+
+13.
+
+git add .
+git commit -m 'Fix wrong condition in filterOddNumbers'
+
+14.
+
+git checkout bug3
+
+15.
+
+git add .
+git commit -m 'Fix method sumEvenNumbers'
+
+16.
+
+git push --all origin
+
+17.
+
+git checkout master
+
+18.
+
+git merge bug1
+Се спојува гранката bug1 кон гранката master
+Не се случува конфликт
+Користена стратегија за спојување на гранките тука е Fast-Forward стратегијата
+
+19.
+
+git push --all origin
+
+20.
+
+git merge bug2
+Се јавува конфликт
+Користена стратегија за спојување на гранките тука е recursive стратегијата
+
+21.
+
+git push --all origin
+
+22.
+
+git checkout bug3
+
+23.
+
+git rebase master
+
+24.
+
+git checkout master
+
+25.
+
+git merge bug3
+Не се јавува конфликт
+Користена стратегија за спојување на гранките тука е Fast-Forward стратегијата
+
+26.
+
+git push --all --force origin
+
+27.
+
+git log
+nano logs.txt
+nano 216057.txt
+git add .
+git commit -m 'Final commit'
+
+28.
+
+git push -all origin
